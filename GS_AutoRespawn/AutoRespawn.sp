@@ -24,6 +24,7 @@ public OnPluginStart()
 }
 public OnMapStart()
 {
+  Format(mapname,sizeof(mapname), "");
   GetCurrentMap(mapname,sizeof(mapname));
   LoadConfig();
 }
