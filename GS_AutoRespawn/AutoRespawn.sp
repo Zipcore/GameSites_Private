@@ -2,7 +2,7 @@
 #include <sourcemod>
 #include <cstrike>
 
-#define FILE_PATH "addons/sourcemod/configs/GS_AutoRespawn.cfg"
+#define FILE_PATH "addons/sourcemod/configs/AutoRespawn.cfg"
 
 float RoundStartTime;
 float RespawnTime;
@@ -11,10 +11,11 @@ bool AutoRespawn_Enable = true;
 char mapname[64];
 public Plugin myinfo =
 {
-    name = "GameSites AutoRespawn",
+    name = "AutoRespawn",
     author = "ESK0",
     description = "",
     version = "1.0",
+    url = "www.github.com/ESK0"
 };
 public OnPluginStart()
 {
@@ -66,7 +67,7 @@ public LoadConfig()
  KeyValues hConfig = new KeyValues("AutoRespawn");
  if(!FileExists(FILE_PATH))
  {
-   SetFailState("[AutoRespawn] 'addons/sourcemod/configs/GS_AutoRespawn.cfg' not found!");
+   SetFailState("[AutoRespawn] 'addons/sourcemod/configs/AutoRespawn.cfg' not found!");
    return;
  }
  hConfig.ImportFromFile(FILE_PATH);
